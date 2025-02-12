@@ -22,7 +22,7 @@ const jsPsych = initJsPsych();
 var trial = {
     timeline:[
         {type: jsPsychHtmlKeyboardResponse,
-stimulus: 'Press any key to begin'},
+        stimulus: 'Press any key to begin'},
         {type: jsPsychHtmlButtonResponse,
          stimulus: function(){
                 var html = `
@@ -41,7 +41,12 @@ stimulus: 'Press any key to begin'},
     {name: '<p style="font-size:48px; color:green;">RED</p>'},
     {name: '<p style="font-size:48px; color:red;">BLUE</p>'},
     {name: '<p style="font-size:48px; color:blue;">BLUE</p>'},
-    {name: '<p style="font-size:48px; color:green;">BLUE</p>'}],randomize_order: true
+    {name: '<p style="font-size:48px; color:green;">BLUE</p>'}],
+
+    sample: {
+        type: 'fixed-repetitions',
+        size: 2
+    }
     
 };
 
