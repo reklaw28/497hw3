@@ -25,10 +25,15 @@ type: jsPsychHtmlKeyboardResponse,
 stimulus: 'This text is example data we want to save.<br>Press any key to try to save it to OSF.'
 };
 var trial = {
-  type: jsPsychHtmlButtonResponse,
-  stimulus: '<p style="font-size:48px; color:red;">GREEN</p>',
-  choices: ['Red', 'Green', 'Blue'],
-  prompt: "<p>What color is the ink?</p>"
+  timeline: [  
+      {type: jsPsychHtmlButtonResponse,
+  stimulus: jsPsych.timelineVariable('name'),
+  choices: ['Match', 'Does not  match'],
+  prompt: "<p>What color is the ink?</p>"}
+],
+    timelineVariable[
+        {'<p style="font-size:48px; color:red;">GREEN</p>'}]
+    randomize_order: true
 };
 
 
