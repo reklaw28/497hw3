@@ -8,6 +8,8 @@ type="text/css" />
      <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.3"></script>
     <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
     <script src="https://unpkg.com/@jspsych.org/v7/plugins/html-keyboard-response/"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.2.0"></script>
+
 
 
 <title>My Experiment</title>
@@ -26,10 +28,10 @@ type: jsPsychHtmlKeyboardResponse,
 stimulus: 'This text is example data we want to save.<br>Press any key to try to save it to OSF.'
 };
 var trial = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus: '<p style="font-size:48px; color:green;">BLUE</p>',
-    choices: <button>match</button><button>does not match</button>,
-    prompt: "<p>Is the ink color (r)ed, (g)reen, or (b)lue?</p>"
+  type: jsPsychHtmlButtonResponse,
+  stimulus: '<p style="font-size:48px; color:red;">GREEN</p>',
+  choices: ['Red', 'Green', 'Blue'],
+  prompt: "<p>What color is the ink?</p>"
 };
 
 
