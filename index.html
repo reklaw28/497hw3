@@ -27,22 +27,20 @@ stimulus: 'This text is example data we want to save.<br>Press any key to try to
 var trial = {
   timeline: [  
     {type: jsPsychHtmlButtonResponse,
-  stimulus: jsPsych.timelineVariable('name'),
+  timeline:[    
+    {stimulus: '<p style="font-size:48px; color:red;">GREEN</p>'},
+    {stimulus: '<p style="font-size:48px; color:blue;">GREEN</p>'},
+    {stimulus: '<p style="font-size:48px; color:green;">GREEN</p>'},
+    {stimulus: '<p style="font-size:48px; color:red;">RED</p>'},
+    {stimulus: '<p style="font-size:48px; color:blue;">RED</p>'},
+    {stimulus: '<p style="font-size:48px; color:green;">RED</p>'},
+    {stimulus: '<p style="font-size:48px; color:red;">BLUE</p>'},
+    {stimulus: '<p style="font-size:48px; color:blue;">BLUE</p>'},
+    {stimulus: '<p style="font-size:48px; color:green;">BLUE</p>'}],
   choices: ['Match', 'Does not  match'],
   prompt: "<p>What color is the ink?</p>"}
 ],
-    timeline_Variable:[
-    {name: '<p style="font-size:48px; color:red;">GREEN</p>'},
-    {name: '<p style="font-size:48px; color:blue;">GREEN</p>'},
-    {name: '<p style="font-size:48px; color:green;">GREEN</p>'},
-    {name: '<p style="font-size:48px; color:red;">RED</p>'},
-    {name: '<p style="font-size:48px; color:blue;">RED</p>'},
-    {name: '<p style="font-size:48px; color:green;">RED</p>'},
-    {name: '<p style="font-size:48px; color:red;">BLUE</p>'},
-    {name: '<p style="font-size:48px; color:blue;">BLUE</p>'},
-    {name: '<p style="font-size:48px; color:green;">BLUE</p>'}
-],
-    randomize_order: false
+    randomize_order: True
 };
 
 
