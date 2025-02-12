@@ -1,3 +1,4 @@
+
 :<!DOCTYPE html>
 <html>
 <head>
@@ -17,12 +18,12 @@ type="text/css" />
 <body>
 </body>
 <script>
-const jsPsych = initJsPsych();
-
+const jsPsych = initJsPsych(override_safe_mode=true);
+var start = {    
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: 'Press any key to begin'};
 var trial = {
-    timeline:[
-        {type: jsPsychHtmlKeyboardResponse,
-        stimulus: 'Press any key to begin'},
+
         timeline:[
         {type: jsPsychHtmlButtonResponse,
          stimulus: function(){
@@ -31,25 +32,25 @@ var trial = {
                 return html;
             },
           choices: ['Match', 'Does not  match'],
-          prompt: "<p>What color is the ink?</p>"}]
+          prompt: "<p>What color is the ink?</p>"}],
+
     timeline_variables:[
     {name: '<p style="font-size:48px; color:red;">GREEN</p>'},
     {name: '<p style="font-size:48px; color:blue;">GREEN</p>'},
     {name: '<p style="font-size:48px; color:green;">GREEN</p>'},
     {name: '<p style="font-size:48px; color:red;">RED</p>'},
-    {name: '<p style="font-size:48px; color:blue;RED</p>'},
+    {name: '<p style="font-size:48px; color:blue;">RED</p>'},
     {name: '<p style="font-size:48px; color:green;">RED</p>'},
     {name: '<p style="font-size:48px; color:red;">BLUE</p>'},
     {name: '<p style="font-size:48px; color:blue;">BLUE</p>'},
     {name: '<p style="font-size:48px; color:green;">BLUE</p>'}],
 
+
     sample: {
         type: 'fixed-repetitions',
         size: 2
     }
-        ],
 
-    
 };
 
 
@@ -57,7 +58,7 @@ const end_trial = {
 type: jsPsychHtmlKeyboardResponse,
 stimulus: 'Nothing left to do here.'
 };
-jsPsych.run([trial]);
+jsPsych.run([start,trial]);
 
 
     </script>
