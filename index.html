@@ -26,6 +26,8 @@ stimulus: 'This text is example data we want to save.<br>Press any key to try to
 };
 var trial = {
     timeline:[
+        {type: jsPsychHtmlKeyboardResponse,
+stimulus: 'Press any key to begin'},
         {type: jsPsychHtmlButtonResponse,
          stimulus: function(){
                 var html = `
