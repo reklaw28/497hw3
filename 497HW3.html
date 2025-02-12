@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/jspsych@7.3.4"></script>
+    <link href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css" rel="stylesheet"
+type="text/css" />
+<script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.2.0"></script>
+     <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.3"></script>
+    <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
+
+
+<title>My Experiment</title>
+</head>
+<body>
+<!--You don't have to create content here. jsPsych will do it for
+you.-->
+</body>
+<script>
+const jsPsych = initJsPsych();
+const dummy_trial = {
+type: jsPsychHtmlKeyboardResponse,
+stimulus: 'This text is example data we want to save.<br>Press any key to try to save it to OSF.'
+};
+
+
+const end_trial = {
+type: jsPsychHtmlKeyboardResponse,
+stimulus: 'Nothing left to do here.'
+};
+jsPsych.run([dummy_trial, end_trial]);
+
+
+    </script>
+
+</html>
