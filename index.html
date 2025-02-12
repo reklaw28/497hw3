@@ -26,13 +26,13 @@ stimulus: 'This text is example data we want to save.<br>Press any key to try to
 };
 var trial = {
   timeline: [  
-      {type: jsPsychHtmlButtonResponse,
+    {type: jsPsychHtmlButtonResponse,
   stimulus: jsPsych.timelineVariable('name'),
   choices: ['Match', 'Does not  match'],
   prompt: "<p>What color is the ink?</p>"}
 ],
     timeline_variables:[
-        {name:'<p style="font-size:48px; color:red;">GREEN</p>'}]
+        {name: '<p style="font-size:48px; color:red;">GREEN</p>'}]
     randomize_order: true
 };
 
@@ -41,7 +41,7 @@ const end_trial = {
 type: jsPsychHtmlKeyboardResponse,
 stimulus: 'Nothing left to do here.'
 };
-jsPsych.run([trial, end_trial]);
+jsPsych.run([trial]);
 
 
     </script>
