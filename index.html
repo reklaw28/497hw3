@@ -15,15 +15,10 @@ type="text/css" />
 <title>My Experiment</title>
 </head>
 <body>
-<!--You don't have to create content here. jsPsych will do it for
-you.-->
 </body>
 <script>
 const jsPsych = initJsPsych();
-const dummy_trial = {
-type: jsPsychHtmlKeyboardResponse,
-stimulus: 'This text is example data we want to save.<br>Press any key to try to save it to OSF.'
-};
+
 var trial = {
     timeline:[
         {type: jsPsychHtmlKeyboardResponse,
