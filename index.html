@@ -59,7 +59,8 @@ const save_data = {
                 action: "save",
                 experiment_id: "CNoNI8MkMUr2",
                 filename: "Walkertest.csv",
-                data_string: ()=>jsPsych.data.get().csv()
+                data_string: ()=>jsPsych.data.get().csv(),
+                on_finish: function(data){alert(data.result.message)
               };
 const end_trial = {
 type: jsPsychHtmlKeyboardResponse,
