@@ -54,12 +54,18 @@ var trial = {
 
 };
 
-
+const save_data = {
+                type: jsPsychPipe,
+                action: "save",
+                experiment_id: "CNoNI8MkMUr2",
+                filename: "Walkertest.csv",
+                data_string: ()=>jsPsych.data.get().csv()
+              };
 const end_trial = {
 type: jsPsychHtmlKeyboardResponse,
 stimulus: 'Nothing left to do here.'
 };
-jsPsych.run([trial,end_trial]);
+jsPsych.run([trial,save_data,end_trial]);
 
 
     </script>
